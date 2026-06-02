@@ -22,6 +22,7 @@ func NewRateLimiter(
 	blockDuration time.Duration,
 ) *RateLimiter {
 	return &RateLimiter{
+		repo:          repo,
 		ipLimit:       ipLimit,
 		tokenLimits:   tokenLimits,
 		blockDuration: blockDuration,
